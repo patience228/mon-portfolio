@@ -21,9 +21,11 @@ const Contact = () => {
         <button type="submit">Envoyer</button>
       </form>
       <div className="contact-links">
-        <p>GitHub: <a href="https://github.com/ton-compte">mon-compte</a></p>
-        <p>LinkedIn: <a href="https://linkedin.com/in/ton-profil">mon-profil</a></p>
-        <p><a href="/CV.pdf">Télécharger CV</a></p>
+        <p>GitHub: <a href="https://github.com/patience228">mon-compte</a></p>
+        <p>LinkedIn: <a href="https://linkedin.com/in/akou-siabi">mon-profil</a></p>
+        <p><a href="/CV_Siabi_Patience.pdf" download>
+          Télécharger CV
+        </a></p>
       </div>
     </section>
   );

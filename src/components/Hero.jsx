@@ -10,7 +10,7 @@ const Hero = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
       >
-        Développeur Python & IA
+        Data Scientiste/IA | Développeuse Full Stack
       </motion.h1>
       <motion.p
         className="hero-subtitle"

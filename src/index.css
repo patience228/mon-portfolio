@@ -1,33 +1,78 @@
+/* ------------------------------
+   GLOBAL
+------------------------------ */
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  color: #2d3748;
+  background-color: #ffffff;
+  scroll-behavior: smooth;
 }
 
-/* Navbar */
+h1, h2, h3 {
+  margin: 0;
+}
+
+h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #2d3748;
+  position: relative;
+}
+
+h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #3182ce;
+  margin: 0.5rem auto 0;
+  border-radius: 2px;
+}
+
+/* ------------------------------
+   NAVBAR
+------------------------------ */
 .navbar {
   position: fixed;
   top: 0;
   width: 100%;
   background: white;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
   z-index: 50;
+  transition: box-shadow 0.3s ease, background 0.3s ease;
 }
+
+.navbar.scrolled {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  background: #fff;
+}
+
 .navbar-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0.5rem 1rem;
+  padding: 0.75rem 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
 .navbar-links a {
   margin-left: 1.5rem;
   text-decoration: none;
-  color: black;
+  color: #2d3748;
+  font-weight: 500;
+  transition: color 0.3s ease;
 }
-.navbar-links a:hover { color: #3182ce; }
 
-/* Hero */
+.navbar-links a:hover {
+  color: #3182ce;
+}
+
+/* ------------------------------
+   HERO SECTION
+------------------------------ */
 .hero-section {
   height: 100vh;
   display: flex;
@@ -36,9 +81,20 @@ body {
   align-items: center;
   text-align: center;
   background: #f7fafc;
+  padding: 0 1rem;
 }
-.hero-title { font-size: 3rem; margin-bottom: 1rem; }
-.hero-subtitle { font-size: 1.25rem; margin-bottom: 1.5rem; }
+
+.hero-title {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+  color: #4a5568;
+}
+
 .hero-button {
   background: #3182ce;
   color: white;
@@ -46,105 +102,217 @@ body {
   border: none;
   border-radius: 0.375rem;
   text-decoration: none;
+  font-size: 1rem;
+  transition: all 0.3s ease;
 }
-.hero-button:hover { background: #2b6cb0; }
 
-/* About */
+.hero-button:hover {
+  background: #2b6cb0;
+  transform: translateY(-2px);
+}
+
+/* ------------------------------
+   ABOUT SECTION
+------------------------------ */
 .section-about {
   padding: 5rem 1rem;
   background: white;
 }
-.section-about h2 { text-align: center; font-size: 2rem; margin-bottom: 2rem; }
-.about-content { display: flex; flex-direction: column; align-items: center; gap: 2rem; }
-.about-content img { width: 12rem; height: 12rem; border-radius: 50%; }
-@media (min-width: 768px) { .about-content { flex-direction: row; } }
 
-/* Projects */
-.section-projects { padding: 5rem 1rem; background: #f7fafc; }
-.section-projects h2 { text-align: center; font-size: 2rem; margin-bottom: 3rem; }
-.projects-grid { display: grid; grid-template-columns: 1fr; gap: 2rem; }
-@media (min-width: 768px) { .projects-grid { grid-template-columns: 1fr 1fr; } }
-.project-card { background: white; padding: 1.5rem; border-radius: 0.5rem; box-shadow: 0 2px 4px rgba(0,0,0,0.05); transition: box-shadow 0.3s; }
-.project-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
-.project-card img { width: 100%; border-radius: 0.5rem; margin-bottom: 1rem; }
-.project-tech span { display: inline-block; background: #ebf8ff; color: #3182ce; padding: 0.25rem 0.5rem; margin-right: 0.25rem; border-radius: 0.25rem; font-size: 0.875rem; }
-
-/* Skills */
-.section-skills { 
-  padding: 5rem 1rem; 
-  background: white; 
-}
-.section-skills h2 { 
-  text-align: center; 
-  font-size: 2rem; 
-  margin-bottom: 3rem; 
-}
-.skills-list { 
-  max-width: 600px; 
-  margin: 0 auto; 
-  display: flex; 
-  flex-direction: column; 
-  gap: 1.5rem; 
-}
-.skill-item h3 { 
-  margin-bottom: 0.5rem; 
-}
-.skill-bar { 
-  width: 100%; 
-  height: 1rem; 
-  background: #e2e8f0; 
-  border-radius: 0.5rem; 
-}
-.skill-progress { 
-  height: 100%; 
-  background: #3182ce; 
-  border-radius: 0.5rem; 
-  transition: width 1s ease-in-out; 
+.about-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  text-align: center;
 }
 
-/* Contact */
-.section-contact { 
-  padding: 5rem 1rem; 
-  background: #f7fafc; 
-  text-align: center; 
+.about-content img {
+  width: 12rem;
+  height: 12rem;
+  border-radius: 50%;
+  object-fit: cover;
 }
-.section-contact h2 { 
-  font-size: 2rem; 
-  margin-bottom: 2rem; 
+
+@media (min-width: 768px) {
+  .about-content {
+    flex-direction: row;
+    text-align: left;
+  }
 }
-.section-contact form { 
-  max-width: 500px; 
-  margin: 0 auto 2rem; 
-  display: flex; 
-  flex-direction: column; 
-  gap: 1rem; 
+
+/* ------------------------------
+   PROJECTS SECTION
+------------------------------ */
+.section-projects {
+  padding: 5rem 1rem;
+  background: #f7fafc;
 }
+
+.projects-section {
+  margin-bottom: 3rem;
+}
+
+.projects-section h3 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  color: #2d3748;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.project-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  padding: 1rem;
+  transition: all 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.project-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 0.75rem;
+}
+
+.project-tech {
+  margin-top: 0.5rem;
+}
+
+.project-tech span {
+  display: inline-block;
+  background: #ebf8ff;
+  color: #3182ce;
+  padding: 0.25rem 0.5rem;
+  border-radius: 5px;
+  margin: 0.2rem;
+  font-size: 0.85rem;
+}
+
+.github-link {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: #3182ce;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.github-link:hover {
+  text-decoration: underline;
+  color: #2b6cb0;
+}
+
+/* ------------------------------
+   SKILLS SECTION
+------------------------------ */
+.section-skills {
+  padding: 5rem 1rem;
+  background-color: #ffffff;
+}
+
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.skill-category h3 {
+  font-size: 1.2rem;
+  color: #2d3748;
+  margin-bottom: 0.5rem;
+}
+
+.skill-category ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.skill-category li {
+  background: #f7fafc;
+  padding: 0.4rem 0.8rem;
+  margin-bottom: 0.3rem;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+/* ------------------------------
+   CONTACT SECTION
+------------------------------ */
+.section-contact {
+  padding: 5rem 1rem;
+  background: #f7fafc;
+  text-align: center;
+}
+
+.section-contact form {
+  max-width: 500px;
+  margin: 0 auto 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
 .section-contact input,
-.section-contact textarea { 
-  padding: 0.75rem; 
-  border: 1px solid #cbd5e0; 
-  border-radius: 0.375rem; 
-  font-size: 1rem; 
+.section-contact textarea {
+  padding: 0.75rem;
+  border: 1px solid #cbd5e0;
+  border-radius: 0.375rem;
+  font-size: 1rem;
 }
-.section-contact button { 
-  padding: 0.75rem; 
-  background: #3182ce; 
-  color: white; 
-  border: none; 
-  border-radius: 0.375rem; 
-  cursor: pointer; 
-  font-size: 1rem; 
+
+.section-contact button {
+  padding: 0.75rem;
+  background: #3182ce;
+  color: white;
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
 }
-.section-contact button:hover { 
-  background: #2b6cb0; 
+
+.section-contact button:hover {
+  background: #2b6cb0;
+  transform: translateY(-2px);
 }
-.contact-links p { 
-  margin: 0.5rem 0; 
+
+.contact-links p {
+  margin: 0.5rem 0;
 }
-.contact-links a { 
-  color: #3182ce; 
-  text-decoration: none; 
+
+.contact-links a {
+  color: #3182ce;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
-.contact-links a:hover { 
-  text-decoration: underline; 
+
+.contact-links a:hover {
+  text-decoration: underline;
+  color: #2b6cb0;
+}
+
+/* ------------------------------
+   RESPONSIVE ADJUSTMENTS
+------------------------------ */
+@media (max-width: 480px) {
+  h2 { font-size: 1.6rem; }
+  .hero-title { font-size: 2rem; }
+  .hero-subtitle { font-size: 1rem; }
 }
