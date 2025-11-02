@@ -7,7 +7,7 @@ const skills = [
   },
   {
     category: 'Frameworks',
-    items: ['Angular', 'Django', 'Spring Boot', 'Laravel', 'Bootstrap'],
+    items: ['Angular', 'Django', 'Spring Boot', 'Laravel', 'Bootstrap', 'React'],
   },
   {
     category: 'Bases de données',

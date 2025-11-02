@@ -2,17 +2,30 @@ import React from 'react';
 
 const professionalProjects = [
   {
-    name: 'REMIND',
-    description: 'IA pour la sélection de matériaux — Projet R&I chez BASSETTI.',
-    tech: ['Angular', 'Python', 'MongoDB'],
-    image: '/remind.png'
-  },
-  {
-    name: 'LabIA',
-    description: 'SDSExtractor — Extraction automatique de données scientifiques (LLM, NLP).',
+    name: 'SDSExtractor & LabIA',
+    description: "Extraction automatique de données techniques à partir des fiches de sécurité et développement d’un module d’évaluation des résultats avec LLM.",
     tech: ['Python', 'LLM', 'NLP'],
     image: '/labia.png'
+  },
+  {
+    name: 'Hindex-Remind',
+    description: "Application web développée pour la sélection optimale de matériaux dans le cadre du projet R&I chez BASSETTI, intégrant visualisation des données et algorithmes de Machine Learning.",
+    tech: ['Angular', 'Python', 'MongoDB', 'Scikit-learn', 'Dataviz'],
+    image: '/remind.png'
+  },  
+  {
+    name: 'GEVISCO & Cantine Management',
+    description: "Développement d’une plateforme complète de gestion scolaire et de cantine : authentification, gestion des utilisateurs, emplois du temps, suivi des paiements et génération de rapports administratifs.",
+    tech: ['Java', 'Spring Boot', 'AngularJS', 'PostgreSQL'],
+    image: '/gevisco.png' 
+  },
+  {
+    name: 'Ge-stock',
+    description: "Système de gestion de stocks développé pour suivre les flux, gérer l’interface utilisateur et générer des rapports. Comprend tests fonctionnels, documentation et formation des utilisateurs.",
+    tech: ['PHP', 'Laravel', 'MySQL'],
+    image: '/gestock.png' 
   }
+  
 ];
 
 const personalProjects = [
@@ -29,7 +42,15 @@ const personalProjects = [
     tech: ['Python', 'TensorFlow', 'Computer Vision'],
     link: 'https://github.com/patience228/emotion-recognition',
     image: '/emotion.png'
+  },
+  {
+    name: 'Portfolio personnel',
+    description: 'Site personnel développé avec React pour présenter mes projets, compétences et expériences.',
+    tech: ['React', 'CSS', 'JavaScript'],
+    link: 'https://github.com/patience228/mon-portfolio',
+    image: '/portfolio.png'
   }
+  
 ];
 
 const Projects = () => {
