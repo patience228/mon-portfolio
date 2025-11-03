@@ -4,7 +4,7 @@ const professionalProjects = [
   {
     name: 'SDSExtractor & LabIA',
     description: "Extraction automatique de données techniques à partir des fiches de sécurité et développement d’un module d’évaluation des résultats avec LLM.",
-    tech: ['Python', 'LLM', 'NLP'],
+    tech: ['Python', 'LLM', 'NLP', 'Computer vision', 'OpenCV'],
     image: '/labia.png'
   },
   {
@@ -39,7 +39,7 @@ const personalProjects = [
   {
     name: 'Reconnaissance des émotions faciales',
     description: 'Détection et classification d’émotions à partir d’images via deep learning.',
-    tech: ['Python', 'TensorFlow', 'Computer Vision'],
+    tech: ['Python', 'TensorFlow', 'Computer Vision', 'OpenCV'],
     link: 'https://github.com/patience228/emotion-recognition',
     image: '/emotion.png'
   },
