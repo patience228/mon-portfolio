@@ -34,41 +34,60 @@ h2::after {
 /* ------------------------------
    NAVBAR
 ------------------------------ */
-.navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background: white;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-  z-index: 50;
-  transition: box-shadow 0.3s ease, background 0.3s ease;
-}
 
-.navbar.scrolled {
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  background: #fff;
+.navbar {
+  background-color: #222;
+  color: white;
+  padding: 0.5rem 1rem;
 }
 
 .navbar-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0.75rem 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .navbar-links a {
-  margin-left: 1.5rem;
+  color: white;
   text-decoration: none;
-  color: #2d3748;
-  font-weight: 500;
-  transition: color 0.3s ease;
+  margin-left: 1rem;
 }
 
-.navbar-links a:hover {
-  color: #3182ce;
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
 }
+
+.bar {
+  height: 3px;
+  width: 25px;
+  background-color: white;
+  margin: 4px 0;
+}
+
+/* Media Query pour mobile */
+@media (max-width: 768px) {
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #222;
+    width: 200px;
+    padding: 1rem;
+  }
+
+  .navbar-links.open {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+
 
 /* ------------------------------
    HERO SECTION
