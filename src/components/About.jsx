@@ -8,7 +8,7 @@ const About = () => {
         <img src="/photo_profil.jpg" alt="Profil" />
         <div>
           <p>
-          Salut ! Je suis ingénieure informatique passionnée par l’IA, la Data et le développement full-stack.
+          Salut ! Je suis <strong>Akou SIABI</strong>, ingénieure informatique passionnée par l’IA, la Data et le développement full-stack.
           J’ai travaillé sur des projets professionnels et personnels mêlant développement web, NLP, LLM, IA générative, ainsi que l’exploitation et la visualisation de données.
           </p>
           <p>

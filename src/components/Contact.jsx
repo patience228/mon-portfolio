@@ -23,9 +23,10 @@ const Contact = () => {
       <div className="contact-links">
         <p>GitHub: <a href="https://github.com/patience228">mon-compte</a></p>
         <p>LinkedIn: <a href="https://linkedin.com/in/akou-siabi">mon-profil</a></p>
-        <p><a href="/CV_Siabi_Patience.pdf" download>
-          Télécharger CV
-        </a></p>
+        <p><a href="/CV_Siabi_Patience.pdf" target="_blank" rel="noopener noreferrer">
+        Télécharger CV
+          </a>
+        </p>
       </div>
     </section>
   );
