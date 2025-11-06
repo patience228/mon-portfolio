@@ -388,3 +388,27 @@ h2::after {
   .hero-title { font-size: 2rem; }
   .hero-subtitle { font-size: 1rem; }
 }
+
+
+/* ------------------------------
+   FOOTER
+------------------------------ */
+.footer {
+  background-color: #222;
+  color: #fff;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  font-size: 0.9rem;
+}
+
+.footer a {
+  color: #3182ce;
+  text-decoration: none;
+  margin: 0 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  color: #63b3ed;
+  text-decoration: underline;
+}
