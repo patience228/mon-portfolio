@@ -15,6 +15,15 @@ const About = () => {
             Mes spécialités incluent l'Intelligence Artificielle, la Data Science, le Machine Learning, l'Analyse de Données, la Data Visualisation, le Développement full-stack et pipelines de données
             Mon objectif est de créer des solutions efficaces et élégantes qui résolvent de vrais problèmes.
           </p>
+          <a
+          href="/CV_Siabi_Patience.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn-cv"
+          >
+            Télécharger mon CV
+          </a>
+
         </div>
       </div>
     </section>
