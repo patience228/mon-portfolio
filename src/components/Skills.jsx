@@ -9,7 +9,7 @@ const skills = [
       { name: 'JavaScript / TypeScript', logo: '/logos/javascript.svg' },
       { name: 'PHP', logo: '/logos/php.svg' },
       { name: 'HTML / CSS', logo: '/logos/html5.svg' },
-      { name: 'SQL', logo: '/logos/sql.svg' },
+      { name: 'SQL', logo: '/logos/sql-database.svg' },
     ],
   },
   {

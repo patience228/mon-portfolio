@@ -15,7 +15,7 @@ const Hero = () => {
       initial={{ opacity: 0, y: -50 }}
       animate={{ opacity: 1, y: [0, -5, 0] }}     
       >
-        Data Scientiste/IA | Développeuse Full Stack
+        Data Scientist/IA | Développeuse Full Stack
       </motion.h1>
 
       <motion.p
