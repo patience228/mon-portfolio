@@ -196,7 +196,7 @@ h2::after {
    PROJECTS SECTION
 ------------------------------ */
 .section-projects {
-  padding: 5rem 1rem;
+  padding: 3rem 1rem;
   background: #f7fafc;
 }
 
@@ -270,7 +270,7 @@ h2::after {
 ------------------------------ */
 
   .section-skills {
-    padding: 4rem 2rem;
+    padding:  3rem 2rem;
     background-color: #f9f9f9;
   }
   
@@ -334,21 +334,7 @@ h2::after {
     color: #555;
   }
   
-  /* ==============================
-     Responsive pour mobile
-     ============================== */
-  @media (max-width: 768px) {
-    .skills-container {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .skill-category {
-      width: 90%;
-      max-width: none;
-    }
-  }
-  
+ 
 
 /* ------------------------------
    CONTACT SECTION
@@ -399,16 +385,6 @@ h2::after {
 
 
 /* ------------------------------
-   RESPONSIVE ADJUSTMENTS
------------------------------- */
-@media (max-width: 480px) {
-  h2 { font-size: 1.6rem; }
-  .hero-title { font-size: 2rem; }
-  .hero-subtitle { font-size: 1rem; }
-}
-
-
-/* ------------------------------
    FOOTER
 ------------------------------ */
 .footer {
@@ -430,3 +406,70 @@ h2::after {
   color: #63b3ed;
   text-decoration: underline;
 }
+
+
+section {
+  scroll-margin-top: 60px;
+}
+
+
+/* ------------------------------
+   RESPONSIVE ADJUSTMENTS
+------------------------------ */
+
+/* mobile/tablette */
+@media (max-width: 768px) {
+  .navbar-container {
+    padding: 15px 20px;
+  }
+
+  @media (max-width: 768px) {
+    section {
+      scroll-margin-top: 60px;
+    }
+  }
+
+  .hero-section {
+    height: auto;
+    padding: 4rem 1rem;
+  }
+
+  .hero-title {
+    font-size: 2.2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .section-about, 
+  .section-projects, 
+  .section-skills, 
+  .section-contact {
+    padding: 2.5rem 1rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr; /* Une seule colonne sur mobile */
+  }
+
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* Très petits écrans */
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 1.8rem;
+  }
+  .hero-subtitle {
+    font-size: 0.9rem;
+  }
+  .btn-cv, .hero-button {
+    font-size: 0.9rem;
+    padding: 0.6rem 1rem;
+  }
+}
+
