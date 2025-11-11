@@ -334,54 +334,216 @@ h2::after {
     color: #555;
   }
   
- 
-
-/* ------------------------------
+ /* ------------------------------
    CONTACT SECTION
 ------------------------------ */
 
 .section-contact {
-  padding: 80px 20px;
+  padding: 3rem 1rem;
+  background: #f7fafc;
   text-align: center;
-  background: #f9f9f9;
 }
 
 .section-contact h2 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   margin-bottom: 40px;
+  color: #0d1b2a;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: stretch;
+  width: 100%;
+  margin: 0;
+  padding: 0 1rem;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.two-tone-bg {
+  position: relative;
+  overflow: hidden;
+}
+
+.two-tone-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: #e6f0ff; 
+  z-index: 0;
+}
+
+.two-tone-bg::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background: #e6f0ff; 
+  z-index: 0;
+}
+
+.contact-info,
+.contact-form-container {
+  position: relative;
+  z-index: 1;
+  flex: 1;
+  min-width: 300px;
+  padding: 2rem;
+  text-align: center;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.info-block.full-width {
+  width: 100%;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.info-bottom {
+  display: flex;
+  justify-content: center; 
+  align-items: stretch;
+  width: 100%;
+}
+
+
+.info-bottom .info-block {
+  flex: 1;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Effet au survol */
+.info-bottom .info-block:hover,
+.info-block.full-width:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+}
+
+.contact-form-container {
+  background: transparent;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+.info-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1.5rem 0rem;
+  background-color: white;
+  border-bottom: 1px solid #eee;
+}
+
+.info-block.full-width {
+  width: 100%;
+  padding-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.info-bottom {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.info-icon {
+  font-size: 2rem;
+  color: #007bff;
+  margin-bottom: 0.5rem;
+}
+
+.info-block h4 {
+  margin: 0.3rem 0;
+  color: #0d1b2a;
+}
+
+.info-block p {
+  margin: 0;
+  color: #333;
+  font-size: 0.95rem;
 }
 
 .contact-form {
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 15px;
-  max-width: 500px;
-  margin: 0 auto;
 }
 
 .contact-form input,
 .contact-form textarea {
-  width: 100%;
-  padding: 10px;
+  padding: 12px;
+  border-radius: 10px;
   border: 1px solid #ccc;
-  border-radius: 6px;
   font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
+  outline: none;
 }
 
 .contact-form button {
-  background-color: #007bff;
-  color: white;
-  border: none;
-  padding: 10px 20px;
+  padding: 12px 20px;
   border-radius: 25px;
+  border: none;
+  color: white;
+  background-color: #007bff;
+  font-weight: bold;
   cursor: pointer;
-  transition: background 0.3s ease;
+  width: 170px;
+  align-self: center;
+  transition: all 0.3s ease;
 }
 
 .contact-form button:hover {
   background-color: #0056b3;
+  transform: translateY(-2px);
 }
+
+.popup-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup {
+  background-color: #fff;
+  padding: 25px 30px;
+  border-radius: 12px;
+  text-align: center;
+  min-width: 300px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
 
 
 /* ------------------------------
@@ -472,4 +634,5 @@ section {
     padding: 0.6rem 1rem;
   }
 }
+
 

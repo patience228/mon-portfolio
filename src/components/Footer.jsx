@@ -13,7 +13,7 @@ const Footer = () => {
         </a>
       </div>
        
-      <p>© 2025 Akou SIABI. Tous droits réservés.</p>
+      <p> © Copyright 2025 Akou SIABI. Tous droits réservés.</p>
     </footer>
   );
 };
